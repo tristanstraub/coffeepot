@@ -1,0 +1,6 @@
+{:boot-cljs   [[adzerk.boot-cljs :refer [cljs]]]
+ :boot-http   [[pandeiro.boot-http :refer [serve]]]
+ :boot-reload [[adzerk.boot-reload :refer [reload]]]
+ :boot-garden [[org.martinklepsch.boot-garden :refer [garden]]]
+ :boot-file   [[com.tristanstraub.boot-file :refer [file]]]
+ :boot-test   [[adzerk.boot-test :refer [test]]]}

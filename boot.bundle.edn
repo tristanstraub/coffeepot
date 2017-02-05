@@ -1,0 +1,133 @@
+{ :clojure-spec      [[clojure-future-spec "1.9.0-alpha13"]
+                      :test-check]
+
+ :clojure-1.8        [[org.clojure/clojure "1.8.0"]
+                      :clojure-spec]
+
+ :clojure            [:clojure-1.8]
+
+ :clojurescript      [[org.clojure/clojurescript "1.9.456"]]
+
+ :test-check         [[org.clojure/test.check "0.9.0"]]
+ :boot-cljs          [:clojurescript
+                      [adzerk/boot-cljs "1.7.228-2" :scope "testing"]]
+ :core-logic         [[org.clojure/core.logic "0.8.11"]]
+ :boot-http          [[pandeiro/boot-http "0.7.6" :scope "testing"]]
+ :boot-reload        [[adzerk/boot-reload "0.4.13" :scope "testing"]]
+ :boot-garden        [[org.martinklepsch/boot-garden "1.3.2-0"]]
+ :core-async         [[org.clojure/core.async "0.2.395"]]
+ :component          [[com.stuartsierra/component "0.3.1"]]
+ :rum                [[rum "0.10.7"]]
+ :core-match         [[org.clojure/core.match "0.3.0-alpha4"]]
+ :tools-nrepl        [[org.clojure/tools.nrepl "0.2.12" :scope "testing"]]
+ :enlive             [[enlive "1.1.6" :exclusions [org.jsoup/jsoup]]]
+ :clj-time           [[clj-time "0.9.0"]]
+ :cljs-time          [[com.andrewmcveigh/cljs-time "0.5.0-alpha2"]]
+ :clj-tagsoup        [[clj-tagsoup/clj-tagsoup "0.3.0"]]
+ :transit-cljs       [[com.cognitect/transit-cljs "0.8.239"]]
+ :transit-clj        [[com.cognitect/transit-clj "0.8.297"]]
+ :raynes-fs          [[me.raynes/fs "1.4.6"]]
+ :boot-file          [[com.tristanstraub/boot-file "0.1.0-SNAPSHOT"]]
+ :compojure          [[compojure "1.4.0"]]
+ :ring-defaults      [[ring/ring-defaults "0.2.1"]]
+ :google-apps        [[google-apps-clj "0.5.3"]]
+ :gapi               [[gapi "1.0.2"]]
+ :google-api         [[com.google.api-client/google-api-client "1.22.0"]]
+ :cljs-ajax          [[cljs-ajax "0.5.8"]]
+ :ring-cors          [[ring-cors "0.1.8"]]
+ :ring-format        [[ring-middleware-format "0.7.0"]]
+ :ring-transit       [[ring-transit "0.1.6"]]
+ :ring               [[ring "1.5.0"]]
+ :adi                [[im.chit/adi "0.3.4"]]
+ :clj-google-signin  [[com.tristanstraub/clj-google-signin "0.1.0-SNAPSHOT"]]
+ :cljs-google-signin [[com.tristanstraub/cljs-google-signin "0.1.0-SNAPSHOT"]]
+ :amazonica          [[amazonica "0.3.78"]]
+ :condensation       [[com.comoyo/condensation "0.2.2" :exclude [amazonica]]]
+ :pathetic           [[pathetic "0.5.1"]]
+ :http-kit           [[http-kit "2.1.19"]]
+ :optimus            [[optimus "0.19.1"]]
+ :environ            [[environ "1.1.0"]]
+ :web-server         [:http-kit
+                      [ring "1.4.0"]
+                      [ring/ring-devel "1.4.0-RC2"]
+                      :ring-cors
+                      :ring-defaults
+                      :ring-format
+                      [compojure "1.4.0"]
+                      [fogus/ring-edn "0.3.0"]]
+
+ :transit            [[com.cognitect/transit-cljs "0.8.239"]]
+
+ :garden             [[garden "1.3.2"]]
+
+ :web                [:clojure
+                      :clojurescript
+                      :web-server
+                      :rum
+                      :enlive
+
+                      [secretary "1.2.3"]
+                      :garden
+                      :transit
+                      :cljs-ajax
+
+                      ;;[devcards "0.2.2"]
+                      [com.cemerick/url "0.1.1"]]
+
+ :aws                [[com.fasterxml.jackson.core/jackson-core "2.6.6"]
+                      :amazonica]
+
+ :datascript         [[datascript "0.15.4"]
+                      :transit
+                      [datascript-transit "0.2.0"]]
+
+ :sql                [[org.clojure/java.jdbc "0.4.2"]
+                      [korma "0.4.2"]
+                      [org.xerial/sqlite-jdbc "3.7.15-M1"]
+                      [ragtime "0.5.2"]
+                      [joplin.core "0.3.6"]
+                      [joplin.jdbc "0.3.6"]]
+
+ :incubator          [[org.clojure/core.incubator "0.1.4"]]
+
+ :alia               [[cc.qbits/alia-all "4.0.0-beta4"]]
+
+ :hayt               [[cc.qbits/hayt "4.0.0-beta7"]]
+
+ :cassandra          [:alia :hayt]
+
+ :base               [:clojure
+                      :component
+                      :logging
+                      :datomic
+                      [com.gfredericks/test.chuck "0.2.7"]
+                      :tools-nrepl
+                      [reloaded.repl "0.2.3" :scope "testing"]
+                      [environ "1.0.1"]
+                      :core-async
+                      :core-match
+                      :clj-time
+                      :cljs-time
+                      :incubator
+                      [org.clojure/data.json "0.2.6"]
+                      [org.clojure/tools.namespace "0.2.11"]]
+
+ :encoding           [[cheshire "5.6.1"]]
+
+ :csv                [[org.clojure/data.csv "0.1.3"]]
+
+ :logging            [[com.taoensso/timbre "4.7.4"]]
+
+ :datomic            [[com.datomic/clj-client "0.8.606"]
+                      [com.datomic/datomic-pro "0.9.5544"]] ;;datomic-pro-0.9.5544.jar
+
+ :midje              [[midje "1.8.3"]]
+ :boot-test          [[adzerk/boot-test "1.2.0"]]
+ :testing            [:midje
+                      :boot-test
+                      :test-check]
+
+ :build              [:boot-cljs
+                      :boot-reload
+                      :boot-http
+                      :boot-garden]}
